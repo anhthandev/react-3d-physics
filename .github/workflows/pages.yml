@@ -33,9 +33,9 @@ jobs:
           version: 6.27.0
           run_install: true
 
-      - name: Test
-        run: |
-          pnpm test
+      # - name: Test
+      #   run: |
+      #     pnpm test
 
       - name: Build
         run: |
