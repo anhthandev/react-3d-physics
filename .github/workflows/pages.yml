@@ -1,0 +1,49 @@
+name: GitHub Pages Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Cache pnpm modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-modules-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-modules-
+
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.27.0
+          run_install: true
+
+      - name: Test
+        run: |
+          pnpm test
+
+      - name: Build
+        run: |
+          export PUBLIC_URL=/binary-search-tree/
+          pnpm build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          folder: build
