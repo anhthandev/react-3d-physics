@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/binary-search-tree/static/css/main.9f146eb5.css",
+    "main.js": "/binary-search-tree/static/js/main.50e8afa4.js",
+    "index.html": "/binary-search-tree/index.html",
+    "main.9f146eb5.css.map": "/binary-search-tree/static/css/main.9f146eb5.css.map",
+    "main.50e8afa4.js.map": "/binary-search-tree/static/js/main.50e8afa4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f146eb5.css",
+    "static/js/main.50e8afa4.js"
+  ]
+}
