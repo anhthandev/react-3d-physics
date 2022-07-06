@@ -3,7 +3,7 @@ import { PhysicsImpostor } from "@babylonjs/core/Physics/physicsImpostor";
 import { Color3 } from "@babylonjs/core/Maths/math.color";
 
 import { useClick } from "react-babylonjs";
-import { forwardRef, MutableRefObject, ReactNode, Ref } from "react";
+import { forwardRef, MutableRefObject } from "react";
 import { Mesh } from "@babylonjs/core/Meshes/mesh";
 import { Nullable } from "@babylonjs/core/types";
 
@@ -15,7 +15,7 @@ type BallProps = {
 export const Ball = forwardRef(
   (
     { position, onClick, ...props }: BallProps,
-    ref: MutableRefObject<Nullable<Mesh>> | Ref<ReactNode>
+    ref: any
   ) => {
     useClick(() => {
       if (
@@ -24,7 +24,7 @@ export const Ball = forwardRef(
       ) {
         onClick();
       }
-    }, ref as MutableRefObject<Nullable<Mesh>>);
+    }, ref);
 
     return (
       <icoSphere

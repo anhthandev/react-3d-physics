@@ -10,7 +10,6 @@ import { Mesh } from "@babylonjs/core/Meshes/mesh";
 import { Scene, Engine, Skybox } from "react-babylonjs";
 import { PhysicsImpostor } from "@babylonjs/core/Physics/physicsImpostor";
 import { CannonJSPlugin } from "@babylonjs/core/Physics/Plugins";
-import { UniversalCamera } from "@babylonjs/core/Cameras/universalCamera";
 import { Ball } from "components/Ball";
 
 import * as CANNON from "cannon";
@@ -21,7 +20,7 @@ const GROUND_SIZE = 1000;
 
 export const Main = () => {
   const ballRef = useRef<Nullable<Mesh>>(null);
-  const cameraRef = useRef<UniversalCamera>(null);
+  const cameraRef = useRef<any>(null);
 
   const pushBall = () => {
     if (ballRef.current !== null && cameraRef.current !== null) {
