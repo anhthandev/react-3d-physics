@@ -39,7 +39,7 @@ jobs:
 
       - name: Build
         run: |
-          export PUBLIC_URL=/binary-search-tree/
+          export PUBLIC_URL=/react-3d-physics/
           pnpm build
 
       - name: Deploy
