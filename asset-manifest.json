@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/binary-search-tree/static/css/main.9f146eb5.css",
-    "main.js": "/binary-search-tree/static/js/main.50e8afa4.js",
-    "index.html": "/binary-search-tree/index.html",
-    "main.9f146eb5.css.map": "/binary-search-tree/static/css/main.9f146eb5.css.map",
-    "main.50e8afa4.js.map": "/binary-search-tree/static/js/main.50e8afa4.js.map"
+    "main.css": "/react-3d-physics/static/css/main.9f146eb5.css",
+    "main.js": "/react-3d-physics/static/js/main.50e8afa4.js",
+    "index.html": "/react-3d-physics/index.html",
+    "main.9f146eb5.css.map": "/react-3d-physics/static/css/main.9f146eb5.css.map",
+    "main.50e8afa4.js.map": "/react-3d-physics/static/js/main.50e8afa4.js.map"
   },
   "entrypoints": [
     "static/css/main.9f146eb5.css",
